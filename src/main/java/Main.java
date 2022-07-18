@@ -10,6 +10,11 @@ public class Main {
 
     public static ArrayList<Integer> getNums(int[] nums) {
         // your code here
-        return null;
+        TreeSet<Integer> prices = new TreeSet<>();
+        for (int num : nums) {
+            prices.add(num);
+        }
+        TreeSet<Integer> newPrices = (TreeSet<Integer>) prices.tailSet(25);
+        return new ArrayList<>(newPrices);
     }
 }
